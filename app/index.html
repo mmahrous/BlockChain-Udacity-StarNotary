@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fun Star Notary Token DAPP</title>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="./app.js"></script>
-</head>
-<body>
-  <h1>Fun Star Notary Token DAPP</h1>
 
-  <hr>
+<head>
+    <title>Fun Star Notary Token DAPP</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <h1>Fun Star Notary Token DAPP</h1>
+
+    <hr>
+    <h3>Look Up Star by ID</h3>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Star ID</span>
+        </div>
+        <input type="text" class="form-control" id="starIdCheck"></input>
+    </div>
+    <br><button id="GetStar" class="btn btn-primary" onclick="App.lookUpStar()">Get Star</button>
+    <br>
+    <span class="text-primary" id="star"></span>
+    <br><br>
     <h3>Create a Star</h3>
     <div class="input-group">
         <div class="input-group-prepend">
@@ -18,19 +31,13 @@
         <input type="text" class="form-control" id="starName"></input>
         <input type="text" class="form-control" id="starId"></input>
     </div>
-    <br><button id="createStar" class="btn btn-primary" onclick="App.createStar()">Create Star</button>
-    <span id="status"></span>
-    <br><br>
-    <h3>Look Up Star by ID</h3>
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Star ID</span>
-        </div>
-        <input type="text" class="form-control" id="starIdCheck"></input>
-    </div>
-    <br><button id="GetStar" class="btn btn-primary"  onclick="App.lookUpStar()">Get Star</button>
-    <span id="star"></span>
-
     <br>
+    <div class="input-group">
+        <button id="createStar" class="btn btn-primary" onclick="App.createStar()">Create Star</button>
+        <br>
+        <div class="text-success" id="status"></dive>
+    </div>
+
 </body>
+
 </html>

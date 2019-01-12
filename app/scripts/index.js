@@ -29,12 +29,14 @@ const App = {
         instance = await StarNotary.deployed()
     },
     createStar: async () => {
+        document.getElementById('status').innerHTML = 'Loading...';
         const name = document.getElementById("starName").value;
         const id = document.getElementById("starId").value;
         await instance.createStar(name, id, {from: me});
-        document.getElementById('status').innerHTML = "New Star Owner is " + me + ".";
+        document.getElementById('status').innerHTML = "New Star Owner is <mark>" + me + "</mark>.";
     },
     lookUpStar: async () => {
+        document.getElementById('star').innerHTML = 'Loading...';
         const starId = document.getElementById("starIdCheck").value;
         let token = await instance.tokenIdToStarInfo.call(parseInt(starId));
         document.getElementById('star').innerHTML = token;
